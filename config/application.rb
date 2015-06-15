@@ -64,6 +64,9 @@ module Rockstage
     #Gives an error when false, app error - something went wrong
     config.assets.initialize_on_precompile = true
 
+    config.assets.compile = true
+    config.assets.precompile =  ['*.js', '*.css', '*.css.erb'] 
+
     # adds app/assets/fonts to the asset path
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
     config.assets.paths << Rails.root.join("app", "assets", "audios")

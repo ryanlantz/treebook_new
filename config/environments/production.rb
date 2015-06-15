@@ -60,6 +60,9 @@ Rockstage::Application.configure do
 
   config.assets.initialize_on_precompile = true
 
+  config.assets.compile = true
+  config.assets.precompile =  ['*.js', '*.css', '*.css.erb'] 
+
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
