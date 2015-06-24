@@ -8,7 +8,6 @@
 		<% end %>
 		<div class="page-header">
 			<h1><%= @user.full_name %></h1>
-				<%= link_to "Albums", albums_path(@user), class: 'btn' %>
 
 				<% if signed_in? %>
 				<span id="friend-status">

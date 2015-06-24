@@ -23,7 +23,6 @@
 						<li>
 							<%= link_to "Friends", user_friendships_path, class: 'navbar-link' %>
 						</li>
-						<li><%= link_to "Albums", albums_path(current_user) %></li>
 						<li><%= link_to current_user.full_name, edit_user_registration_path %></li>
 						<li><%= link_to "Log Out", logout_path %></li>
 					<% else %>
@@ -44,9 +43,7 @@
 			<ul class="nav">
 				<li class="divider-vertical"><%= link_to "All Messages", feed_path %></li>
 				<% if user_signed_in? %>
-					<li id="activity-feed"><%= link_to "Notifications", "#" %></li>
 					<li><%= link_to "Activity Feed", activities_path %></li>
-					<li><%= link_to "Share", new_status_path, class: 'blue-link' %></li>
 				<% end %>
 			</ul>
 			<ul class="nav pull-right">
@@ -54,7 +51,6 @@
 					<li>
 						<%= link_to "Friends", user_friendships_path %>
 					</li>
-					<li><%= link_to "Albums", albums_path(current_user) %></li>
 					<li><%= link_to current_user.full_name, edit_user_registration_path %></li>
 					<li><%= link_to "Log Out", logout_path %></li>
 				<% else %>
